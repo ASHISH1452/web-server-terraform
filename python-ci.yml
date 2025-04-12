@@ -24,8 +24,13 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt    
-    
+        pip install -r requirements.txt
+
+    # Add this step to list files and verify test_example.py file
+    - name: List files
+      run: ls -alh
+
     - name: Run tests
       run: |
-         pytest test_example.py --maxfail=1 --disable-warnings -q
+        pytest test_example.py --maxfail=1 --disable-warnings -q
+
