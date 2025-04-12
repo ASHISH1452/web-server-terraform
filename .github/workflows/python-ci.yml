@@ -1,4 +1,4 @@
-name: Python CI/CD Pipeline
+name: Python CI
 
 on:
   push:
@@ -9,17 +9,17 @@ on:
       - main
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
+    - name: Checkout code
       uses: actions/checkout@v2
 
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.8'
+        python-version: '3.x'
 
     - name: Install dependencies
       run: |
@@ -29,3 +29,4 @@ jobs:
     - name: Run tests
       run: |
         pytest
+
