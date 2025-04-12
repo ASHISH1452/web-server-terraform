@@ -40,10 +40,7 @@ resource "aws_instance" "web_server" {
 
   associate_public_ip_address = true
 
-  tags = {
-    Name = "WebServerInstance"
-  }
-}
+  tags }
 
 resource "aws_s3_bucket" "static_site" {
   bucket = "ashishpal-static-site-demo-unique123"
