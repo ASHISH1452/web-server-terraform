@@ -1,3 +1,11 @@
+
+# Terraform state files
 terraform.tfstate
 terraform.tfstate.backup
+
+# Terraform provider directories
+.terraform/
+
+# Java jar file (tool)
+bfg-1.14.0.jar
 
