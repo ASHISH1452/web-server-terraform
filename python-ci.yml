@@ -27,10 +27,7 @@ jobs:
         pip install -r requirements.txt
 
     
-    - name: Discover Tests
-      run: |
-        pytest --collect-only
-
+    
     - name: Run tests
       run: |
-         pytest test_example.py -v
+         pytest --maxfail=1 --disable-warnings -q
