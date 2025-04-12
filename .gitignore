@@ -9,3 +9,5 @@ terraform.tfstate.backup
 # Java jar file (tool)
 bfg-1.14.0.jar
 
+__pycache__/
+myenv/
